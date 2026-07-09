@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thesis — The Interest Alliance</title>
+<meta name="description" content="A category-level thesis on the operational data layer of the AI application stack and the ownership structures appropriate to it.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F4F0E6'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia' font-size='20' fill='%231A2332'%3EI%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap mast-inner">
+    <a href="index.html" class="brand">The <span class="brand-mark">Interest</span> Alliance</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="thesis.html" class="active">Thesis</a>
+      <a href="approach.html">Approach</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding-bottom: 72px;">
+    <div class="wrap">
+      <div class="eyebrow">Thesis</div>
+      <h1>The operational data layer, and the ownership it requires.</h1>
+      <p class="hero-lede">
+        A category-level thesis on the layer of the AI application stack at which state, memory, retrieval, and orchestration converge — and on the ownership structures appropriate to long-duration strategic technology assets in that layer.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <div class="section-eyebrow">Part I</div>
+      <h2 class="section-heading" style="margin-bottom: 32px;">The AI application stack has a contested layer.</h2>
+
+      <p class="lede">
+        Every adjacent layer of the AI application stack is dominated by one or two structurally similar incumbents. The operational data layer — the layer at which application state, agent memory, retrieval, and orchestration converge — is the position where that structure is not yet resolved.
+      </p>
+
+      <p>
+        Frontier model providers, compute and silicon, analytics and training, cloud infrastructure — each of these layers has consolidated into an oligopoly whose leading firms are established, well-capitalised, and structurally similar. The competitive dynamics within each layer are known. The strategic questions are how the layers interact and how value accrues across them, not who occupies which position.
+      </p>
+      <p>
+        The operational data layer is different. It sits between the analytics layer (where warehouses and lakehouses operate on historical data) and the application layer (where agents and applications operate on live state). It is architecturally distinct from both: analytical systems are optimised for large-scale reads over stable schemas; application systems are optimised for low-latency writes over evolving schemas; the operational data layer supports the latter workload class at scale, with the additional characteristics that agentic applications require — vector retrieval, semantic search, time-windowed access to memory, transactional consistency over heterogeneous data.
+      </p>
+      <p>
+        The layer is not yet dominated by a single incumbent, and the competitive dynamics within it are unresolved. Multiple architectural approaches remain viable. Multiple firms hold meaningful positions. The layer is under active development by hyperscalers, by established database vendors, by open-source communities, and by adjacent platform companies extending into the space. Which position or positions become durable, and on what horizon, are open questions.
+      </p>
+
+      <h2>Why the layer matters strategically.</h2>
+
+      <p>
+        The operational data layer is where agentic applications will live. Every AI-native application that graduates from prototype to production requires infrastructure at this layer: durable state, retrieval over accumulated context, memory that persists across sessions, transactional guarantees for tool use and side effects. The layer is not glamorous — it does not attract the attention that frontier models attract — but it is the substrate on which the next generation of enterprise software runs.
+      </p>
+      <p>
+        The layer's importance also extends beyond the commercial. The leading firms in the operational data layer control the substrate through which enterprise data flows into and out of AI applications. That control has strategic significance — for the enterprises that depend on it, for the ecosystems that build on it, and, at sufficient scale, for questions of national technological competitiveness. The layer is a control point in a broader system whose importance is only beginning to be understood.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--paperAlt);">
+    <div class="wrap prose">
+      <div class="section-eyebrow">Part II</div>
+      <h2 class="section-heading" style="margin-bottom: 32px;">The ownership structures fit the layer poorly.</h2>
+
+      <p class="lede">
+        Firms in this layer share a set of investment characteristics that the standard ownership structures — public equity and traditional private equity — accommodate imperfectly.
+      </p>
+
+      <h3>The mismatch with public-equity ownership.</h3>
+      <p>
+        Public companies disclose financial results four times a year, and the disclosure is consumed by an analytical apparatus that rewards predictability over magnitude. For most companies, this is benign. For long-duration platform companies, whose value depends on decisions that suppress current reported performance in exchange for architectural transformation over horizons that exceed the market's attention span, the disclosure regime penalises the strategy that the asset most rewards.
+      </p>
+      <p>
+        The pattern is well documented. Companies at this stage face a structural choice between executing the strategy their competitive position requires and managing the narrative their shareholders price. The two diverge by design. Where the divergence is severe, the market's response is multiple compression and a rising cost of capital, which further constrains the company's ability to execute the strategy the position requires. The workaround that has produced the largest platform companies of the past three decades — founder voting control through dual-class share structures — depends on the personal authority of specific founders and does not generalise across changes in personnel.
+      </p>
+
+      <h3>The mismatch with traditional private equity.</h3>
+      <p>
+        Traditional private equity is raised in the closed-end fund structure, with a contractual return-of-capital deadline that operates on the sponsor from the moment the fund is raised. The exit horizon at the sponsor level becomes an exit horizon at the asset level, because the sponsor must realise the investment within a window that fits the fund's life. For assets whose investment thesis requires ten to fifteen years to play out, the six-to-seven-year effective holding period of a typical closed-end fund is insufficient.
+      </p>
+      <p>
+        The pressure operates throughout the holding period, not only at its end. Decisions made in year two are evaluated on their contribution to the asset's saleability at the eventual exit, not on their contribution to its terminal value under indefinite ownership. Architectural investments that would compound over a decade are foregone in favour of operational improvements that support a higher exit multiple. Continuation vehicles extend the holding period but re-impose the same deadline at the end of the extension. The structural feature — the fund-level exit deadline — remains.
+      </p>
+
+      <div class="callout">
+        Neither existing structure fits well, and the failures are structural rather than incidental. They recur across transactions with sufficient regularity that they should be understood as features of the structures rather than as bugs.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <div class="section-eyebrow">Part III</div>
+      <h2 class="section-heading" style="margin-bottom: 32px;">Permanent capital is the third structural option.</h2>
+
+      <p class="lede">
+        Capital that is not subject to a contractual return-of-capital obligation at the vehicle level. The horizon is set at the asset, by the asset's investment characteristics — not at the vehicle, by a fund's contractual life.
+      </p>
+
+      <p>
+        Permanent capital is not a technical term with a single definition, and the existing literature uses it variously. For our purposes, permanent capital means capital that is not subject to a contractual return-of-capital deadline at the ownership vehicle. The capital may be raised from investors whose own capital has a horizon; the capital may be rotated among investors through secondary mechanisms over long periods; the vehicle may redeem investors under specific governance procedures on defined timelines. What it is not is capital that the vehicle must return to its investors by a specified date regardless of the state of the underlying investment.
+      </p>
+      <p>
+        This distinction shifts the location of the investment-horizon decision. In a closed-end fund, the horizon is determined at the fund's formation, by its contractual terms, and operates on the sponsor with the force of a deadline. In a public-equity structure, the horizon is determined by the median holding period of the marginal shareholder, and operates on management with the force of recurring scrutiny. In a permanent-capital structure, the horizon is determined at the level of the asset — by the strategic assessment of the underlying investment, by the judgment of an independent board operating without the gravitational pull of an external clock. The horizon is set by the asset's needs rather than by the vehicle's contractual obligations.
+      </p>
+
+      <h2>Reference models.</h2>
+      <p>
+        The individual architectural commitments that make permanent-capital governance work are not novel. Each has been implemented, in one form or another, by an existing institution. What is missing from the current landscape is not the concept — it is a clean institutional template for applying permanent-capital governance to the specific case of single-asset acquisitions of operating technology companies under institutional rather than personal control.
+      </p>
+    </div>
+
+    <div class="wrap" style="margin-top: 40px;">
+      <div class="models">
+        <div class="model">
+          <div class="model-tag">Reference — Public listed</div>
+          <div class="model-name">Berkshire Hathaway</div>
+          <p class="model-body">
+            Sixty years of decentralised long-horizon holding, minimal distributions, capital allocated centrally to the highest available long-horizon return. Publicly listed but operated on posture indifferent to the disclosure regime.
+          </p>
+        </div>
+        <div class="model">
+          <div class="model-tag">Reference — Technology</div>
+          <div class="model-name">Constellation Software</div>
+          <p class="model-body">
+            The closest existing analogue focused on technology assets. Substantive management autonomy across hundreds of operating businesses; disciplined capital allocation at the parent level; indefinite holding.
+          </p>
+        </div>
+        <div class="model">
+          <div class="model-tag">Reference — Institutional</div>
+          <div class="model-name">Direct-investing programs</div>
+          <p class="model-body">
+            The largest pension funds and sovereign wealth funds have operated direct-investing programs on horizons matched to their liability profiles. Substantial economic ownership, bounded governance rights, no operational involvement.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap prose">
+
+      <p>
+        The Interest Alliance draws on each of these reference points, and diverges from them in specific respects. The full architectural discussion — governance structure, board independence, the management-authority boundary, investor rights, capital allocation philosophy — is the substance of our approach.
+      </p>
+
+      <p style="margin-top: 40px;">
+        <a href="approach.html" style="font-family: var(--f-mono); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">Read the approach →</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div>The Interest Alliance · Europe · Middle East · Africa</div>
+    <div class="foot-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="approach.html">Approach</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

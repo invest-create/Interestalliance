@@ -1,0 +1,498 @@
+/* The Interest Alliance — institutional site */
+
+:root {
+  --ink: #1A2332;
+  --paper: #F4F0E6;
+  --paperAlt: #EAE4D3;
+  --accent: #B8956A;
+  --accentD: #8E7047;
+  --petrol: #2A4A5C;
+  --muted: #7A7362;
+  --mutedD: #5F5B4F;
+  --hair: #D6CFC0;
+  --hairMuted: #C7BFAA;
+
+  --f-display: Georgia, 'Times New Roman', 'Iowan Old Style', serif;
+  --f-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --f-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --max: 1140px;
+  --gutter: 32px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Layout scaffolding ---- */
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.rule {
+  height: 1px;
+  background: var(--hair);
+  border: 0;
+  margin: 0;
+}
+
+/* ---- Global masthead ---- */
+.mast {
+  border-bottom: 1px solid var(--hair);
+  padding: 24px 0;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.mast-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-family: var(--f-display);
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+.brand .brand-mark {
+  color: var(--accent);
+  font-style: italic;
+}
+.nav {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.nav a {
+  color: var(--petrol);
+  text-decoration: none;
+  padding: 4px 0;
+  margin-left: 32px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  display: inline-block;
+}
+.nav a:first-child { margin-left: 0; }
+.nav a:hover,
+.nav a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* ---- Hero ---- */
+.hero {
+  padding: 96px 0 120px;
+  border-bottom: 1px solid var(--hair);
+}
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+}
+.hero h1 {
+  font-family: var(--f-display);
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin: 0 0 40px 0;
+  max-width: 22ch;
+  color: var(--ink);
+}
+.hero-lede {
+  font-size: 20px;
+  line-height: 1.55;
+  max-width: 62ch;
+  color: var(--petrol);
+  margin: 0 0 72px 0;
+}
+
+/* ---- Horizon signature ---- */
+.horizons {
+  padding: 40px 0 0;
+  border-top: 1px solid var(--hair);
+  max-width: 780px;
+}
+.horizon {
+  display: flex;
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--hairMuted);
+}
+.horizon:last-child { border-bottom: 0; padding-bottom: 0; }
+.horizon-tag {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mutedD);
+  width: 128px;
+  flex-shrink: 0;
+}
+.horizon-body {
+  flex: 1;
+}
+.horizon-label {
+  font-family: var(--f-display);
+  color: var(--ink);
+  line-height: 1.2;
+}
+.horizon-1 .horizon-label { font-size: 18px; color: var(--muted); }
+.horizon-2 .horizon-label { font-size: 24px; color: var(--petrol); }
+.horizon-3 .horizon-label { font-size: 32px; color: var(--ink); font-weight: 500; }
+.horizon-sub {
+  display: block;
+  font-family: var(--f-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* ---- Section spacing ---- */
+.section {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--hair);
+}
+.section:last-child { border-bottom: 0; }
+
+.section-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-family: var(--f-display);
+  font-size: clamp(30px, 3.5vw, 40px);
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin: 0 0 40px 0;
+  max-width: 26ch;
+  color: var(--ink);
+}
+
+/* ---- Focus areas grid ---- */
+.focus-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px -20px 0;
+}
+.focus-card {
+  flex: 1 1 0;
+  min-width: 260px;
+  padding: 24px 20px 0;
+  margin: 0 20px;
+  border-top: 1px solid var(--ink);
+}
+.focus-num {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.focus-title {
+  font-family: var(--f-display);
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 12px 0;
+}
+.focus-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--petrol);
+  margin: 0;
+}
+
+/* ---- Prose columns (for thesis, approach) ---- */
+.prose {
+  max-width: 68ch;
+}
+.prose p {
+  margin: 0 0 22px 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.prose p.lede {
+  font-size: 21px;
+  line-height: 1.55;
+  color: var(--petrol);
+  margin-bottom: 40px;
+  font-family: var(--f-display);
+  font-style: italic;
+  font-weight: 400;
+}
+.prose h2 {
+  font-family: var(--f-display);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 56px 0 20px 0;
+  padding-top: 32px;
+  border-top: 1px solid var(--hair);
+}
+.prose h3 {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--petrol);
+  margin: 32px 0 12px 0;
+}
+.prose .callout {
+  border-left: 2px solid var(--accent);
+  padding: 6px 0 6px 24px;
+  margin: 32px 0;
+  font-family: var(--f-display);
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ---- Principles list ---- */
+.principles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px -28px;
+}
+.principle {
+  flex: 1 1 300px;
+  min-width: 260px;
+  margin: 0 28px 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hair);
+}
+.principle-num {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.principle-title {
+  font-family: var(--f-display);
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 10px 0;
+}
+.principle-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--petrol);
+  margin: 0;
+}
+
+/* ---- Reference models card set ---- */
+.models {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px -16px;
+}
+.model {
+  flex: 1 1 260px;
+  min-width: 240px;
+  margin: 0 16px 32px;
+  padding: 28px 24px;
+  background: var(--paperAlt);
+  border-left: 2px solid var(--accent);
+}
+.model-name {
+  font-family: var(--f-display);
+  font-size: 22px;
+  color: var(--ink);
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+}
+.model-tag {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accentD);
+  margin-bottom: 16px;
+}
+.model-body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--petrol);
+  margin: 0;
+}
+
+/* ---- Contact ---- */
+.contact-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px -40px 0;
+}
+.contact-column {
+  flex: 1 1 380px;
+  min-width: 320px;
+  padding: 0 40px;
+  margin-bottom: 40px;
+}
+.contact-card {
+  padding-top: 32px;
+  border-top: 1px solid var(--ink);
+}
+.contact-name {
+  font-family: var(--f-display);
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 4px 0;
+  font-weight: 400;
+}
+.contact-title {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--petrol);
+  margin: 0 0 32px 0;
+  font-style: italic;
+}
+.contact-line {
+  display: flex;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hair);
+  align-items: baseline;
+}
+.contact-line:last-child { border-bottom: 0; }
+.contact-label {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  width: 100px;
+  flex-shrink: 0;
+}
+.contact-value {
+  font-size: 16px;
+  color: var(--ink);
+  flex: 1;
+}
+.contact-value a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hair);
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease;
+}
+.contact-value a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.contact-narrative {
+  font-family: var(--f-display);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--petrol);
+  font-style: italic;
+  max-width: 42ch;
+}
+
+/* ---- Footer ---- */
+.foot {
+  padding: 48px 0;
+  border-top: 1px solid var(--hair);
+  background: var(--paperAlt);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mutedD);
+}
+.foot-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.foot-right {
+  display: inline-block;
+}
+.foot a {
+  color: var(--mutedD);
+  text-decoration: none;
+  margin-left: 32px;
+  transition: color 0.15s ease;
+}
+.foot a:first-child { margin-left: 0; }
+.foot a:hover { color: var(--ink); }
+
+/* ---- Responsive ---- */
+@media (max-width: 780px) {
+  :root { --gutter: 24px; }
+  .nav a { margin-left: 20px; font-size: 11px; letter-spacing: 0.12em; }
+  .focus-card, .principle, .model { flex-basis: 100%; }
+  .hero { padding: 72px 0 88px; }
+  .section { padding: 72px 0; }
+  .horizon-tag { width: 100px; }
+  .horizon-3 .horizon-label { font-size: 26px; }
+  .horizon-2 .horizon-label { font-size: 20px; }
+  .horizon-1 .horizon-label { font-size: 16px; }
+}
+@media (max-width: 560px) {
+  .mast { padding: 16px 0; }
+  .mast-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .brand { font-size: 18px; }
+  .nav { gap: 16px; }
+  .hero h1 { font-size: 34px; }
+  .hero-lede { font-size: 17px; }
+  .foot-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---- Accessibility ---- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0s !important; transition-duration: 0s !important; }
+}
